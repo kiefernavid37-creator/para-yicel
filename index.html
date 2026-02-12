@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Yicel 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+padding:0;
+background:linear-gradient(135deg,#ff8ac6,#ff4d94,#ff0066);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:'Great Vibes', cursive;
+overflow:hidden;
+}
+
+/* SOBRE */
+.envelope-container{
+position:absolute;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.envelope{
+width:320px;
+height:220px;
+background:#ff4d94;
+position:relative;
+border-radius:8px;
+cursor:pointer;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.flap{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ff66a3;
+clip-path:polygon(0 0, 50% 60%, 100% 0);
+transform-origin:top;
+transition:0.8s;
+border-radius:8px;
+}
+
+.envelope:hover .flap{
+transform:rotateX(180deg);
+}
+
+.envelope-text{
+position:absolute;
+width:100%;
+text-align:center;
+top:90px;
+color:white;
+font-size:28px;
+z-index:2;
+}
+
+/* CARTA */
+.letter{
+position:absolute;
+width:90%;
+max-width:500px;
+height:85vh;
+background:#fffaf0;
+border-radius:25px;
+padding:25px;
+overflow-y:auto;
+display:none;
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+animation:appear 1s ease;
+}
+
+@keyframes appear{
+from{opacity:0; transform:scale(0.8);}
+to{opacity:1; transform:scale(1);}
+}
+
+.letter::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:repeating-linear-gradient(
+white,
+white 30px,
+#f3f3f3 31px
+);
+opacity:0.3;
+border-radius:25px;
+pointer-events:none;
+}
+
+h1{
+text-align:center;
+font-size:40px;
+background:linear-gradient(90deg,#ff0066,#ff99cc,#ff0066);
+background-size:200%;
+color:transparent;
+background-clip:text;
+-webkit-background-clip:text;
+animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+to{background-position:200% center;}
+}
+
+h2{
+margin-top:20px;
+font-size:28px;
+}
+
+p{
+font-size:22px;
+margin:6px 0;
+}
+
+/* BOTONES */
+.buttons{
+margin-top:30px;
+position:relative;
+height:120px;
+}
+
+button{
+padding:12px 30px;
+font-size:22px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+position:absolute;
+font-family:'Great Vibes', cursive;
+}
+
+#yes{
+background:#ff0066;
+color:white;
+left:15%;
+}
+
+#no{
+background:#999;
+color:white;
+right:15%;
+}
+
+/* PANTALLA FINAL */
+.final-screen{
+display:none;
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#ff0066,#ff99cc);
+color:white;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-size:28px;
+padding:20px;
+}
+
+/* CORAZONES */
+.heart{
+position:fixed;
+font-size:24px;
+animation:float 3s linear forwards;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-600px);opacity:0;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="envelope-container" onclick="openLetter()">
+<div class="envelope">
+<div class="flap"></div>
+<div class="envelope-text">Amor mío 💌</div>
+</div>
+</div>
+
+<div class="letter" id="letter">
+
+<h1>Yicel 💖</h1>
+
+<h2>¿Quieres ser mi San Valentín este 14 de febrero (18 en nuestro caso)?</h2>
+
+<h2>14 razones porque te amo</h2>
+
+<p>💖 Por tu pelo hermoso</p>
+<p>💖 Tus lindos ojos café</p>
+<p>💖 Tu cara hermosa</p>
+<p>💖 Tu personalidad</p>
+<p>💖 Tu manera de hablar</p>
+<p>💖 Cómo te preocupas por mí</p>
+<p>💖 Cómo te esfuerzas en hacerme feliz</p>
+<p>💖 Porque dices que sí para hacerme feliz</p>
+<p>💖 Porque me hablas aunque estés ocupada</p>
+<p>💖 Porque te esfuerzas en todo</p>
+<p>💖 La paciencia que me tienes</p>
+<p>💖 La manera en que me miras</p>
+<p>💖 Porque eres el amor de mi vida</p>
+
+<h2>Te amo en 14 idiomas</h2>
+
+<p>❤️ I love you</p>
+<p>❤️ Je t'aime</p>
+<p>❤️ Ti amo</p>
+<p>❤️ Ich liebe dich</p>
+<p>❤️ Eu te amo</p>
+<p>❤️ Aishiteru</p>
+<p>❤️ Saranghae</p>
+<p>❤️ Wo ai ni</p>
+<p>❤️ Te iubesc</p>
+<p>❤️ Ik hou van jou</p>
+<p>❤️ Mahal kita</p>
+<p>❤️ Ya tebya lyublyu</p>
+<p>❤️ Te amo</p>
+<p>❤️ Te quiero</p>
+
+<h2>14 razones por las cuales te elegiría siempre</h2>
+
+<p>✨ Porque me haces reír</p>
+<p>✨ Porque me haces sentir bien a tu lado</p>
+<p>✨ Por la manera en que me tocas</p>
+<p>✨ Por cómo te preocupas</p>
+<p>✨ Por cómo confías en mí</p>
+<p>✨ Por cómo aguantas</p>
+<p>✨ Porque dices que soy el mejor</p>
+<p>✨ Por cómo me miras</p>
+<p>✨ Porque arreglas las cosas</p>
+<p>✨ Por cómo te esfuerzas</p>
+<p>✨ Por cómo eres conmigo</p>
+<p>✨ Por tu belleza</p>
+<p>✨ Por tu forma de ser</p>
+<p>✨ Porque eres tú</p>
+
+<div class="buttons">
+<button id="yes" onclick="acceptLove()">Sí 💘</button>
+<button id="no" onmouseover="moveNo()">No</button>
+</div>
+
+</div>
+
+<div class="final-screen" id="final">
+Amor, espero que esta decisión sea de tu corazón 💖<br><br>
+Y yo sea la persona que realmente quieras.<br><br>
+Te amo mucho.
+</div>
+
+<script>
+
+function openLetter(){
+document.querySelector(".envelope-container").style.display="none";
+document.getElementById("letter").style.display="block";
+}
+
+function moveNo(){
+let btn=document.getElementById("no");
+btn.style.top=Math.random()*80+"px";
+btn.style.left=Math.random()*70+"%";
+}
+
+function acceptLove(){
+document.getElementById("letter").style.display="none";
+let final=document.getElementById("final");
+final.style.display="flex";
+
+for(let i=0;i<50;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.bottom="0";
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),3000);
+}
+}
+
+</script>
+
+</body>
+</html>
